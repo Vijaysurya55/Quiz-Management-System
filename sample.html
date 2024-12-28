@@ -1,0 +1,27 @@
+<!DOCTYPE html><html>
+ <head>
+ <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.2/themes/ui-darkness/jquery-ui.css">
+<style>
+        #sortable li {
+            font-size: 25px;
+            height: 20px;
+        }
+    </style>
+
+<script>  
+    $(document).ready(function () {
+      $("#sortable").sortable({opacity:0.5,cursor:"grabbing",helper:"clone"});
+             });  
+</script>  
+</head>  
+<body>
+  <ul id="sortable">
+       <li>list 1</li>
+<li>list 2</li>
+<li>list 3</li>
+<li>list 4</li>
+    </ul>
+</body>  
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XMLHttpRequest Example</title>
+</head>
+<body>
+
+<button id="send-request">Send Request</button>
+<div id="response"></div>
+
+<script>
+    var url = 'http://localhost:8000/success.html';
+
+document.getElementById('send-request').addEventListener('click', function(){
+    var xhr = new XMLHttpRequest();
+    var url = 'D:\Lab-4\succes.html'; 
+    var data = JSON.stringify({ key: 'value' });
+    
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState === XMLHttpRequest.DONE) {
+            if(xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                document.getElementById('response').innerText = 'Response: ' + response.message;
+            } else {
+                console.error('Request failed with status:', xhr.status);
+            }
+        }
+    };
+    
+    xhr.send(data);
+});
+</script>
+
+</body>
+</html>

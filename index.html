@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz GO! - Your Quiz Hosting Platform</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f6f9fc;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #3498db;
+            box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            color: #ecf0f1;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .navbar-toggler-icon {
+            border: 2px solid #ecf0f1;
+        }
+
+        .navbar-toggler {
+            outline: none;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ecf0f1;
+            margin-right: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #1f3a5a;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: orange;
+            color: #ecf0f1;
+            box-shadow: 0 10px 20px rgb(234, 53, 200);
+        }
+
+        .hero-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+        }
+
+        .quiz-actions,
+        .quiz-upload {
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 50px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgb(51, 213, 235);
+        }
+
+        .quiz-actions h2,
+        .quiz-upload h2 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-buttons .btn {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin-right: 15px;
+        }
+
+        .cta-buttons .btn-primary {
+            background-color: #3498db;
+            border: 2px solid #3498db;
+        }
+
+        .cta-buttons .btn-secondary {
+            background-color: #e74c3c;
+            border: 2px solid #e74c3c;
+        }
+
+        .cta-buttons .btn-info {
+            background-color: #2ecc71;
+            border: 2px solid #2ecc71;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">&nbsp;&nbsp;
+            <img src="logo2.webp" alt="Quizz GO! Logo">
+            Quizz GO!
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="takequiz.html">Quizzes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="feedback.html">Feedback</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<br><br>
+    <div class="container hero-section">
+        <h1>Host and Attend Quizzes with Ease</h1>
+        <p>Explore, learn, and challenge yourself with Quizz GO!</p>
+    </div>
+
+    <div class="container quiz-actions">
+        <h2>Take a Quiz or Host Your Own</h2>
+        <p>Discover a variety of quizzes or create your own to share with the world.</p>
+        <div class="cta-buttons">
+            <a href="takequiz.html" class="btn btn-primary">Take a Quiz</a>
+            <a href="hostquiz.html" class="btn btn-secondary">Host a Quiz</a>
+        </div>
+    </div>
+
+    <div class="container quiz-upload">
+        <h2>Contribute to the Community</h2>
+        <p>Upload your own quiz questions and help others expand their knowledge.</p>
+        <a href="#" class="btn btn-info cta-buttons">Upload Questions</a>
+    </div><br>
+    <br>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

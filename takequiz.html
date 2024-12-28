@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz GO! - Take a Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h2>Available Quizzes</h2>
+
+        <div id="quizList">
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("quiz_processor.php")
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length === 0) {
+                        document.getElementById("quizList").innerHTML = "<p>No quizzes available.</p>";
+                    } else {
+                        data.forEach(function (quiz) {
+                            var quizCard = '<div class="card mt-3">' +
+                                '<div class="card-body">' +
+                                '<h5 class="card-title">' + quiz.name + '</h5>' +
+                                '<p class="card-text">Test your knowledge with this quiz.</p>' +
+                                '<a href="' + quiz.link + '" class="btn btn-primary">Start Quiz</a>' +
+                                '</div>' +
+                                '</div>';
+    
+                            document.getElementById("quizList").innerHTML += quizCard;
+                        });
+                    }
+                })
+                .catch(error => console.error("Error fetching quizzes:", error));
+        });
+    </script>
+
+</body>
+
+</html>
